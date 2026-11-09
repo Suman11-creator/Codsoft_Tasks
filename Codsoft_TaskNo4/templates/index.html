@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"
+            defer></script>
+</head>
+<body>
+    <main class="game">
+        <h1>✊ Rock Paper Scissors ✌️</h1>
+        <p class="subtitle">Choose your move and challenge the computer!</p>
+
+        <section class="scoreboard">
+            <div>
+                <h3>You</h3>
+                <p id="user-score">0</p>
+            </div>
+            <div>
+                <h3>Ties</h3>
+                <p id="ties">0</p>
+            </div>
+            <div>
+                <h3>Computer</h3>
+                <p id="computer-score">0</p>
+            </div>
+        </section>
+
+        <h2>Make your choice</h2>
+
+        <section class="choices">
+            <button class="choice" data-choice="rock">
+                ✊<span>Rock</span>
+            </button>
+            <button class="choice" data-choice="paper">
+                ✋<span>Paper</span>
+            </button>
+            <button class="choice" data-choice="scissors">
+                ✌️<span>Scissors</span>
+            </button>
+        </section>
+
+        <section class="result-box" aria-live="polite">
+            <p id="status">Your move?</p>
+            <p id="moves">You: — | Computer: —</p>
+            <h2 id="result">Let's play!</h2>
+        </section>
+
+        <button id="reset-button" class="reset">
+            Play Again / Reset Score
+        </button>
+
+        <p id="error" role="alert"></p>
+
+        <p class="rules">
+            Rock beats Scissors · Scissors beats Paper · Paper beats Rock
+        </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,153 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #111827, #312e81);
+    color: #f9fafb;
+    font-family: Arial, sans-serif;
+}
+
+.game {
+    width: 100%;
+    max-width: 650px;
+    padding: 32px 24px;
+    border: 1px solid #4b5563;
+    border-radius: 24px;
+    background: rgba(17, 24, 39, 0.95);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: clamp(25px, 5vw, 34px);
+    margin-top: 0;
+}
+
+.subtitle,
+.rules {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    margin: 28px 0;
+    padding: 16px 8px;
+    border-radius: 16px;
+    background: #1f2937;
+}
+
+.scoreboard h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+.scoreboard p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+    padding: 18px 14px;
+    border: 2px solid #6366f1;
+    border-radius: 16px;
+    background: #312e81;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.choice span {
+    font-size: 15px;
+}
+
+.choice:hover {
+    background: #4f46e5;
+    transform: translateY(-4px);
+}
+
+.choice:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.result-box {
+    margin: 24px 0;
+    padding: 20px;
+    border-radius: 16px;
+    background: #1f2937;
+}
+
+#status {
+    color: #cbd5e1;
+}
+
+#moves {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+#result {
+    color: #a5b4fc;
+}
+
+.reset {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #6366f1;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background: #4f46e5;
+}
+
+#error {
+    color: #fca5a5;
+}
+
+@media (max-width: 420px) {
+    .game {
+        padding: 24px 14px;
+    }
+
+    .choices {
+        gap: 8px;
+    }
+
+    .choice {
+        min-width: 0;
+        flex: 1;
+        padding: 16px 8px;
+        font-size: 30px;
+    }
+}
